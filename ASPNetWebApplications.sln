@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CodeFirst-Template Giydirme", "CodeFirst-Template Giydirme", "{8918A4CB-D601-4F6C-BA6B-3D903E037857}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yonetim.UI.Web", "Yonetim.UI.Web\Yonetim.UI.Web.csproj", "{F4BFC203-FD11-4881-8885-ACE93FED41C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yonetim.Model", "Yonetim.Model\Yonetim.Model.csproj", "{EC4755CD-37BB-465A-9699-D9117B32DCCC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yonetim.BLL", "Yonetim.BLL\Yonetim.BLL.csproj", "{D356949C-44D8-4FEC-B474-F9A544F870C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yonetim.DAL", "Yonetim.DAL\Yonetim.DAL.csproj", "{063DEA4D-3754-4305-A38C-26C82C4A10FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yonetim.Admin.Tema", "Yonetim.Admin.Tema\Yonetim.Admin.Tema.csproj", "{B41AD1A3-A552-4982-9DF9-21057ACD2547}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F4BFC203-FD11-4881-8885-ACE93FED41C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4BFC203-FD11-4881-8885-ACE93FED41C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4BFC203-FD11-4881-8885-ACE93FED41C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4BFC203-FD11-4881-8885-ACE93FED41C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC4755CD-37BB-465A-9699-D9117B32DCCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC4755CD-37BB-465A-9699-D9117B32DCCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC4755CD-37BB-465A-9699-D9117B32DCCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC4755CD-37BB-465A-9699-D9117B32DCCC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D356949C-44D8-4FEC-B474-F9A544F870C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D356949C-44D8-4FEC-B474-F9A544F870C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D356949C-44D8-4FEC-B474-F9A544F870C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D356949C-44D8-4FEC-B474-F9A544F870C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{063DEA4D-3754-4305-A38C-26C82C4A10FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{063DEA4D-3754-4305-A38C-26C82C4A10FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{063DEA4D-3754-4305-A38C-26C82C4A10FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{063DEA4D-3754-4305-A38C-26C82C4A10FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B41AD1A3-A552-4982-9DF9-21057ACD2547}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B41AD1A3-A552-4982-9DF9-21057ACD2547}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B41AD1A3-A552-4982-9DF9-21057ACD2547}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B41AD1A3-A552-4982-9DF9-21057ACD2547}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F4BFC203-FD11-4881-8885-ACE93FED41C8} = {8918A4CB-D601-4F6C-BA6B-3D903E037857}
+		{EC4755CD-37BB-465A-9699-D9117B32DCCC} = {8918A4CB-D601-4F6C-BA6B-3D903E037857}
+		{D356949C-44D8-4FEC-B474-F9A544F870C2} = {8918A4CB-D601-4F6C-BA6B-3D903E037857}
+		{063DEA4D-3754-4305-A38C-26C82C4A10FB} = {8918A4CB-D601-4F6C-BA6B-3D903E037857}
+		{B41AD1A3-A552-4982-9DF9-21057ACD2547} = {8918A4CB-D601-4F6C-BA6B-3D903E037857}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>      @*Burayı pages/blank ten aldık Burayı yaptıktan sonra vendor dosyasını ve dist dosyasını Yonetim.UI a kopyaladık. Çünkü bak aşağıdaki adreslerde onların adı geçiyor. Bu yüzden tüm link href kodlarını sildik. Yerine UI içine yeni yüklediğimiz vendor ve dist klasörlerinin içindeki ilgili dosyaların adresini ekledik. Eskileri yorum satırına aldım. Özet olarak aşağıdaki değişikliklerle beraber blank.html i komple aldık.  *@
+ 
+    <meta charset="utf-8">  
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>SB Admin 2 - Bootstrap Admin Theme</title>
+    @*<!-- Bootstrap Core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- MetisMenu CSS -->*@
+    @*<link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">*@
+    <link href="~/vendor/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/vendor/metisMenu/metisMenu.min.css" rel="stylesheet" />
+    <link href="~/dist/css/sb-admin-2.css" rel="stylesheet" />
+    <link href="~/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs/dt-1.10.15/af-2.2.0/b-1.3.1/b-print-1.3.1/cr-1.3.3/fc-3.2.2/fh-3.1.2/r-2.1.1/sc-1.4.2/datatables.min.css" />  @*// bu linkide datatables sitesinden isteğimize göre seçeneklere basarak link aldık. Aynısının scripti de aşağıda yazıldı*@
+    <link href="~/Content/Site.css" rel="stylesheet" /> @*//bunu da renk için biz açtık*@
+
+    @*<!-- Custom CSS -->
+    <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">*@
+   
+</head>
+<body>
+    <div id="wrapper">  @*Bu div i de blank.html den aldık. Aşağıdaki bazı divleri, PartialLayout yaptık. Ve yerine tetikleyicilerini koyduk. Bu layoutları tetikleyecek methodları HomeCOntroller in içine yazdık.   *@ 
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            @{ Html.RenderAction("NavHeaderPartial", "Home"); }
+            <!-- /.navbar-header -->
+            @{ Html.RenderAction("NavRightPartial", "Home");}
+            <!-- /.navbar-top-links -->
+            @{ Html.RenderAction("SideBarPartial", "Home");}
+            <!-- /.navbar-static-side -->
+        </nav>
+        <!-- Page Content -->
+        <div id="page-wrapper">
+            <div class="container-fluid">
+               @RenderBody()
+                <!-- /.row -->
+            </div>
+            <!-- /.container-fluid -->
+        </div>
+        <!-- /#page-wrapper -->
+    </div>
+
+   @*Bunlar da blank içinde script src lerin adresleri idi. Gittik yine UI dan aldık bunları elle sürükleyip bırakarak.*@ 
+   
+    <script src="~/vendor/jquery/jquery.min.js"></script>
+   
+  
+    <script src="~/vendor/bootstrap/js/bootstrap.min.js"></script>
+   
+   
+    <script src="~/vendor/metisMenu/metisMenu.min.js"></script>
+   
+    <script src="~/dist/js/sb-admin-2.js"></script>
+
+
+    <script type="text/javascript" src="https://cdn.datatables.net/v/bs/dt-1.10.15/af-2.2.0/b-1.3.1/b-print-1.3.1/cr-1.3.3/fc-3.2.2/fh-3.1.2/r-2.1.1/sc-1.4.2/datatables.min.js"></script>
+    @*DataTables designed and created by SpryMedia Ltd © 2007-2017. MIT licensed. Our Supporters*@
+    <script src="~/Script/App.js"></script>
+</body>
+</html>
