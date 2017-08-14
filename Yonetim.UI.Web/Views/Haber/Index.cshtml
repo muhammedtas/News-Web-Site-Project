@@ -1,0 +1,51 @@
+﻿@model List<HaberViewModel>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/_AdminLayoutPage.cshtml";
+}
+
+<h2>Haberler</h2>
+
+<div class="row">
+    <div class="col-md-12">
+        <table id="tblhaber" class="table table-hover table-responsive"> @*//butbl haber app.js den geldi.*@ 
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Başlık</th>
+                    <th>İçeril</th>
+                    <th>Eklenme Tarihi</th>
+                    <th>Yayında mı?</th>
+                    <th>Düzenle</th>
+
+                </tr>
+
+            </thead> 
+            <tbody>
+                @{int sayac = 0; }
+                @foreach (var item in Model)
+                {
+                    <tr>
+
+                        @sayac++;
+                        <th scope="row"></th>
+                        <td>@item.Baslik</td>
+                        <td>
+                            @{ string icerik = Html.Encode(item.Icerik);}
+                            @(icerik.Length<100?$"{icerik}":$"{icerik.Substring(0,100)}") @*//şimdi bunu böyle bir if else yazdık ama kodun içinden html kodu da gelecek patlar bu satır. Bunu değiştireceğiz. Gittik üst taraftaki encode kodunu yazdık. Direk Icerik 'i çekmektense icerikdiye bir şeye encode lu halini attık. *@ 
+	                            
+                        </td>
+                        <td> @($"{item.EklenmeZamani:dd MMMM yy}")</td>
+                        <td>@(item.YayindaMi?Html.Raw("<span class='label label-success'>Yayında </span>"):Html.Raw("<span class='label label-danger'>Yayında değil </span>"))</td>
+                        <td>
+                            <a href="#" class="btn btn-block btn-warning">Düzenle</a>
+                        </td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+
+    </div>
+
+</div>

@@ -20,6 +20,9 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs/dt-1.10.15/af-2.2.0/b-1.3.1/b-print-1.3.1/cr-1.3.3/fc-3.2.2/fh-3.1.2/r-2.1.1/sc-1.4.2/datatables.min.css" />  @*// bu linkide datatables sitesinden isteğimize göre seçeneklere basarak link aldık. Aynısının scripti de aşağıda yazıldı*@
     <link href="~/Content/Site.css" rel="stylesheet" /> @*//bunu da renk için biz açtık*@
 
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.6/summernote.css" rel="stylesheet">
+    @*//burayı summernote sitesinden aldık*@
+
     @*<!-- Custom CSS -->
     <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
     <!-- Custom Fonts -->
@@ -60,9 +63,14 @@
    
     <script src="~/dist/js/sb-admin-2.js"></script>
 
-
     <script type="text/javascript" src="https://cdn.datatables.net/v/bs/dt-1.10.15/af-2.2.0/b-1.3.1/b-print-1.3.1/cr-1.3.3/fc-3.2.2/fh-3.1.2/r-2.1.1/sc-1.4.2/datatables.min.js"></script>
     @*DataTables designed and created by SpryMedia Ltd © 2007-2017. MIT licensed. Our Supporters*@
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.6/summernote.js"></script> @*//summernote sitesinden geldi bu summernote u normalde buradakilerden sonra yazdık ama app.js den öne koyduk. Çünkü herşey app.js içinde, önce tanıtman sonra okutman lazım. Yoksa summernote metin kutun çıkmaz kardeş. *@
     <script src="~/Script/App.js"></script>
+    
+
+    
+
+
 </body>
 </html>

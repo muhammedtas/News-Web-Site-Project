@@ -21,7 +21,7 @@
                 <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Haberler <span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li>
-                        <a href="flot.html">Yeni Haber Ekle</a>
+                        <a href="@Url.Action("Ekle","Haber")">Yeni Haber Ekle</a> @*//haber ekleme linkini aktif yaptık.*@ 
                     </li>
                     <li>
                         <a href="morris.html">Morris.js Charts</a>
@@ -32,6 +32,9 @@
             <li>
                 <a href="tables.html"><i class="fa fa-table fa-fw"></i> Kategoriler <span class="fa arrow"></span> </a> @*bu spanı yukarıdan eklersen bizim de okumuz olur*@
                 <ul class="nav nav-second-level">
+                    <li>
+                        <a href="@Url.Action("Duzenle","Kategori")">Kategori Düzenle</a> 
+                    </li>
                     <li>
                         <a href="@Url.Action("Ekle","Kategori")">Yeni Kategori Ekle</a>
                     </li>

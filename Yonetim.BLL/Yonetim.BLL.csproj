@@ -50,6 +50,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\Repository.cs" />
     <Compile Include="Repository\RepositoryBase.cs" />
+    <Compile Include="Settings\HtmlToText.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Yonetim.DAL\Yonetim.DAL.csproj">
