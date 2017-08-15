@@ -1,0 +1,31 @@
+﻿@model Haber
+@{
+    ViewBag.Title = $"{Model.Baslik}";
+    ViewBag.Keywords = Model.Keywords;
+    Layout = "~/Views/_SiteLayoutPage.cshtml";
+}
+
+@*//şimdi haberin eklenme zamanını vs ekleyelim, sayaç olsun işte yaklaşık şu akadar gün önce vs desin.*@
+<div class="row">
+    <div class="col-md-10 col-md-offset-2">
+        <h2>@Model.Baslik </h2>
+        <span class="text-right haberinfo">@($"{Model.EklenmeZamani:dd MMMM yy dddd} - Okunma: {Model.Hit}") </span> @*//eklenme zamanını ve okunma sayısını da burada koyduk.texti de sağa yasladık. *@
+        <br />
+        <div class="text-justify habericerik">
+            @*// justify yapınca texy iki yana yaslı olarak çıkar*@
+            @*@Model.Icerik //böyle yazınca yazılar htm i bozuk çıkıyor. Bunu raw etmeliyiz*@
+            @Html.Raw(Model.Icerik)
+
+        </div>
+        <div>
+            @foreach (var item in Model.Kategoriler)
+            {
+                <span class="text-info text-lowercase">@item.Ad</span>
+            }
+        </div>
+        <div>
+            <span class="text-lowercase">@Model.Keywords.Replace(",", " ")</span> @*// keywords ler arasındaki boşluğu da , diye değiştirdik.*@
+        </div>
+    </div>
+</div>
+

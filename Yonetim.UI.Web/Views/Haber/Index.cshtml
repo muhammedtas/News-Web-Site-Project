@@ -1,4 +1,5 @@
-﻿@model List<HaberViewModel>
+﻿@using Yonetim.BLL.Settings
+@model List<HaberViewModel>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/_AdminLayoutPage.cshtml";
@@ -25,20 +26,21 @@
                 @{int sayac = 0; }
                 @foreach (var item in Model)
                 {
+                    sayac++;
                     <tr>
 
-                        @sayac++;
+                       
                         <th scope="row"></th>
                         <td>@item.Baslik</td>
                         <td>
-                            @{ string icerik = Html.Encode(item.Icerik);}
+                            @{ string icerik = SiteSettings.GetPlainTextFromHtml(item.Icerik);}
                             @(icerik.Length<100?$"{icerik}":$"{icerik.Substring(0,100)}") @*//şimdi bunu böyle bir if else yazdık ama kodun içinden html kodu da gelecek patlar bu satır. Bunu değiştireceğiz. Gittik üst taraftaki encode kodunu yazdık. Direk Icerik 'i çekmektense icerikdiye bir şeye encode lu halini attık. *@ 
 	                            
                         </td>
                         <td> @($"{item.EklenmeZamani:dd MMMM yy}")</td>
                         <td>@(item.YayindaMi?Html.Raw("<span class='label label-success'>Yayında </span>"):Html.Raw("<span class='label label-danger'>Yayında değil </span>"))</td>
                         <td>
-                            <a href="#" class="btn btn-block btn-warning">Düzenle</a>
+                            <a href="@Url.Action("Duzenle","Haber",new { id = item.Id })" class="btn btn-block btn-warning">Düzenle</a>
                         </td>
                     </tr>
                 }

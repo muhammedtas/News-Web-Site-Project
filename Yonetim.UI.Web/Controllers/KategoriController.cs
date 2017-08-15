@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Yonetim.BLL.Repository;
 using Yonetim.Model.Entities;
 using Yonetim.Model.ViewModels;
-using static Yonetim.BLL.Repository.Repository;
 
 namespace Yonetim.UI.Web.Controllers
 {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using static Yonetim.BLL.Repository.Repository;
+using Yonetim.BLL.Repository;
 
 namespace Yonetim.UI.Web.Models
 {

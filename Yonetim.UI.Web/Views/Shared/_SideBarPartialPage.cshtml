@@ -14,18 +14,19 @@
                 </div>
                 <!-- /input-group -->
             </li>
-            <li>
+            @*<li>
                 <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
-            </li>
+            </li>*@
             <li>
                 <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Haberler <span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li>
-                        <a href="@Url.Action("Ekle","Haber")">Yeni Haber Ekle</a> @*//haber ekleme linkini aktif yaptık.*@ 
+                        <a href="@Url.Action("Index","Haber")">Haberler</a>
                     </li>
                     <li>
-                        <a href="morris.html">Morris.js Charts</a>
+                        <a href="@Url.Action("Ekle","Haber")">Yeni Haber Ekle</a> @*//haber ekleme linkini aktif yaptık.*@ 
                     </li>
+                    
                 </ul>
                 <!-- /.nav-second-level -->
             </li>
@@ -41,11 +42,16 @@
                     
                 </ul>
             </li>
+
             <li>
-                <a href="forms.html"><i class="fa fa-edit fa-fw"></i> Form </a>
+                <a href="@Url.Action("Index","Site")"><i class="fa fa-table fa-fw"></i> Haberleri Görüntüle  </a> @*bu spanı yukarıdan eklersen Buton üstünde ok  olur. Eğer açılır bir pencere istiyorsan span atarsın, bunda ise gerek yok. *@
+               
             </li>
-            <li>
-                <a href="#"><i class="fa fa-wrench fa-fw"></i> UI Elements<span class="fa arrow"></span></a>
+            @*<li>
+                <a href="forms.html"><i class="fa fa-edit fa-fw"></i> Form </a>
+            </li>*@
+            @*<li>*@
+                @*<a href="#"><i class="fa fa-wrench fa-fw"></i> UI Elements<span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li>
                         <a href="panels-wells.html">Panels and Wells</a>
@@ -65,10 +71,10 @@
                     <li>
                         <a href="grid.html">Grid</a>
                     </li>
-                </ul>
+                </ul>*@
                 <!-- /.nav-second-level -->
-            </li>
-            <li>
+            @*</li>*@
+            @*<li>
                 <a href="#"><i class="fa fa-sitemap fa-fw"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li>
@@ -97,16 +103,16 @@
                     </li>
                 </ul>
                 <!-- /.nav-second-level -->
-            </li>
+            </li>*@
             <li class="active">
-                <a href="#"><i class="fa fa-files-o fa-fw"></i> Sample Pages<span class="fa arrow"></span></a>
+                @*<a href="#"><i class="fa fa-files-o fa-fw"></i> Sample Pages<span class="fa arrow"></span></a>*@
                 <ul class="nav nav-second-level">
-                    <li>
+                    @*<li>
                         <a class="active" href="blank.html">Blank Page</a>
-                    </li>
-                    <li>
+                    </li>*@
+                    @*<li>
                         <a href="login.html">Login Page</a>
-                    </li>
+                    </li>*@
                 </ul>
                 <!-- /.nav-second-level -->
             </li>

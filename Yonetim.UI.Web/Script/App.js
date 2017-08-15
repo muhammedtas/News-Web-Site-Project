@@ -1,4 +1,4 @@
-﻿$(function ($) {
+﻿(function ($) {
     $.extend($.summernote.lang, {
         'tr-TR': {
             font: {
@@ -96,7 +96,6 @@
                 undo: 'Geri al',
                 redo: 'Yeniden yap'
             }
-
         }
     });
 })(jQuery);
@@ -141,9 +140,8 @@ $("#tblhaber").DataTable({
 });
 $("#Icerik").summernote({
     lang: 'tr-TR',
-    height: 250,
+    height: 400,
     codemirror: {
         theme: 'monokai'
     }
 }); 
-//bu hocanın evladıyelik js kodu. Tr karakterleri ayarlıyor, summernote  den metin kutusu getiriyor. Arama butonu getiriryor. 
